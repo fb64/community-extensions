@@ -2,17 +2,17 @@ extension:
   name: gcs
   description: DuckDB GCS Extension
   extended_description: A native GCS extension with support for standard Google auth methods
-  version: 0.0.3
+  version: 0.0.4
   language: C++
   build: cmake
   license: MIT
-  excluded_platforms: "wasm_mvp;wasm_eh;wasm_threads;windows_amd64_mingw;windows_amd64"
+  excluded_platforms: "linux_amd64;linux_amd64_musl;linux_arm64;linux_arm64_musl;osx_amd64;osx_arm64;wasm_eh;wasm_mvp;wasm_threads;windows_amd64_mingw;windows_arm64"
   maintainers:
     - northpolesec
 
 repo:
   github: northpolesec/duckdb-gcs
-  ref: 5465cad377f83637f8233b9756062b98352e3cdd
+  ref: fb344c4914626e67de7dd63899de56856f1fff6b
 
 docs:
   hello_world: |

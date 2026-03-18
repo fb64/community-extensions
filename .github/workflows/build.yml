@@ -95,7 +95,7 @@ jobs:
 
   build:
     needs: prepare
-    uses: duckdb/extension-ci-tools/.github/workflows/_extension_distribution.yml@v1.5-variegata
+    uses: fb64/extension-ci-tools/.github/workflows/_extension_distribution.yml@windows-path
     if: ${{ needs.prepare.outputs.COMMUNITY_EXTENSION_NAME != '' }}
     with:
       duckdb_version: ${{ inputs.duckdb_version || 'v1.5.0' }}

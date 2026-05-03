@@ -116,3 +116,10 @@ docs:
     Project details and examples: https://github.com/sounkou-bioinfo/DuckTinyCC
 
     Community package excludes WASM targets.
+    
+    Additional Notes:
+    Generated and helper functions are SQL scalar UDFs; only tcc_module(...), tcc_system_paths(...), and tcc_library_probe(...) are table functions. 
+    For library linking, we can pass short names (m, z, c), explicit filenames (libfoo.so, foo.dll, .a, .lib), or path-like values. 
+    Because DuckTinyCC uses -nostdlib by default, use library := 'c' when generated code needs libc symbols that are not otherwise injected. 
+    Pointer helpers are low-level interop tools; for most workflows, handle-based access is safer than raw tcc_dataptr
+    
